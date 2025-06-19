@@ -1,0 +1,91 @@
+:root {
+  --bg:            #fdfdfd;
+  --primary:       #2979ff;
+  --primary-dark:  #1c54b2;
+  --note-bg:       #e3f2fd;
+  --note-hover:    #bbdefb;
+  --note-border:   #90caf9;
+  --text:          #212121;
+  --radius:        6px;
+  --shadow:        0 1px 4px rgba(0,0,0,.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  width: 300px;
+  min-height: 250px;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: .75rem 1rem .25rem;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+  user-select: none;
+}
+
+h1 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+ul#notes {
+  list-style: none;
+  padding: .5rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+ul#notes li {
+  background: var(--note-bg);
+  border: 1px solid var(--note-border);
+  border-radius: var(--radius);
+  padding: .5rem .75rem;
+  cursor: pointer;
+  word-break: break-all;
+  transition: background .15s ease, transform .1s ease;
+  box-shadow: var(--shadow);
+}
+
+ul#notes li:hover {
+  background: var(--note-hover);
+  transform: translateY(-1px);
+}
+
+footer {
+  padding: .5rem 1rem 1rem;
+  border-top: 1px solid #eee;
+}
+
+#addBtn {
+  width: 100%;
+  border: none;
+  border-radius: var(--radius);
+  padding: .6rem 1rem;
+  font-size: .9rem;
+  font-weight: 600;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  transition: background .15s ease;
+  box-shadow: var(--shadow);
+}
+
+#addBtn:hover {
+  background: var(--primary-dark);
+}
